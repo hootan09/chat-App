@@ -7,6 +7,6 @@ $ yarn install
 $ expo start --clear
 ```
 <div>
-    <img src="./tmp/app1.png" width="30%" height="30%" alt="Start Screen">
+    <img src="./tmp/app1.jpg" width="30%" height="30%" alt="Start Screen">
 </div>
 </br>
