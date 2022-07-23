@@ -13,7 +13,7 @@ const StartScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{display: 'flex', flexDirection: 'row',flex: 1/2, justifyContent: 'center', borderBottomRightRadius: 70, backgroundColor: colors.white}}>
+      <View style={{display: 'flex', flexDirection: 'row',flex: 1/2, justifyContent: 'center', alignContent: 'center', borderBottomRightRadius: 70, backgroundColor: colors.white}}>
         <Image 
             source={require('../assets/images/7.png')}
             style={{width: 270, height:270}}
@@ -21,7 +21,7 @@ const StartScreen = ({navigation}) => {
       </View>
       <View style={{position: 'absolute',zIndex:-1,top:'50%',backgroundColor: colors.white, flex:1, width:'50%', height:'30%'}}></View>
       <View style={{flex: 1/2, backgroundColor: colors.darkBlue, borderTopLeftRadius: 70}}>
-            <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingHorizontal: 40, marginTop: 40}}>
+            <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center',justifyContent: 'center', paddingHorizontal: 40, marginTop: 40}}>
                 <Text style={{color: colors.white, fontSize: 25, fontWeight: '600', flexWrap: 'wrap'}}>Let's connect</Text>
                 <Text style={{color: colors.white, fontSize: 25, fontWeight: '600', flexWrap: 'wrap'}}>with each other</Text>
                 <Text style={{color: colors.lightGray, fontSize: 14, fontWeight: '400', flexWrap: 'wrap', paddingTop: 10}}>A message is a discrete communication</Text>

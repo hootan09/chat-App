@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import colors from '../assets/colors/colors'
  import {CameraIcon, SearchIcon} from 'react-native-heroicons/outline'
@@ -21,15 +21,20 @@ const HomeScreen = ({ navigation }) => {
   }, [])
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" /> 
       {/* Header */}
-      <View style={{flex: 2/10,backgroundColor: colors.darkBlue, paddingVertical: 20, borderBottomLeftRadius: 70}}>
-        <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between',alignItems:'center' ,paddingHorizontal: 8}}>
-          <CameraIcon size={22} opacity={0.8} color={colors.white} />
+      <View style={{flex: 3/16,backgroundColor: colors.darkBlue, paddingVertical: 10, borderBottomLeftRadius: 70}}>
+        <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between',alignItems:'center' ,paddingHorizontal: 16}}>
+          <TouchableOpacity>
+            <CameraIcon size={22} opacity={0.8} color={colors.white} />
+          </TouchableOpacity>
           <Text style={{fontSize: 18, fontWeight: '600', color: colors.white, flex: 1, textAlign: 'center'}}>Modychat</Text>
-          <SearchIcon size={22} opacity={0.8} color={colors.white} />
+          <TouchableOpacity>
+            <SearchIcon size={22} opacity={0.8} color={colors.white} />
+          </TouchableOpacity>
         </View>
 
-        <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginHorizontal: '10%', marginTop: 15, backgroundColor: colors.darkViolet, paddingHorizontal: 20, paddingVertical: 12, borderRadius: 10}}>
+        <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginHorizontal: '10%', marginTop: 15, backgroundColor: colors.darkViolet, paddingHorizontal: 20, paddingVertical: 10, borderRadius: 10}}>
           <TouchableOpacity
             onPress={()=> setSelectedComponent('chat')}
             style={{backgroundColor: selectedComponent == 'chat' ? colors.darkBlue : colors.darkViolet, paddingHorizontal: 20, paddingVertical: 8, borderRadius: 6}}>

@@ -15,7 +15,7 @@ const PersonRow = ({image,name,description,time,hasBadge = false,badgeCount = 0,
                         <Text style={{position: 'absolute',right:0,bottom: 0,textAlign: 'center' ,backgroundColor: colors.red,color: colors.white ,fontSize: 10, fontWeight: '400',borderRadius: 4, padding: 3,paddingHorizontal: 5}}>+</Text>
                     )}
                 { hasBadge && (
-                        <Text style={{position: 'absolute',right:-3,top: -3,textAlign: 'center' ,backgroundColor: colors.red,color: colors.white ,fontSize: 10, fontWeight: '400',borderRadius: 4, padding: 3,paddingHorizontal: 5}}>{badgeCount.toString()}</Text>
+                        <Text style={{position: 'absolute',right:-3,top: -3,textAlign: 'center' ,backgroundColor: colors.red,color: colors.white ,fontSize: 10, fontWeight: '400',borderRadius: 10, padding: 3,paddingHorizontal: 5}}>{badgeCount.toString()}</Text>
                 )}
             </View>
             <View style={{marginLeft: 5}}>

@@ -5,7 +5,7 @@ import colors from '../assets/colors/colors'
 
 const CallComponent = () => {
   return (
-    <View style={{flex: 8/10,backgroundColor: colors.white, borderTopRightRadius: 70}}>
+    <View style={{flex: 13/16,backgroundColor: colors.white, borderTopRightRadius: 70}}>
     <View style={{paddingTop: 10, paddingHorizontal:15}}>
       <Text style={{color: colors.black, fontSize: 17, fontWeight: '600'}}>My Status</Text>
       <View style={{top: 8}}>
