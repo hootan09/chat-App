@@ -26,7 +26,9 @@ const StartScreen = ({navigation}) => {
                 <Text style={{color: colors.white, fontSize: 25, fontWeight: '600', flexWrap: 'wrap'}}>with each other</Text>
                 <Text style={{color: colors.lightGray, fontSize: 14, fontWeight: '400', flexWrap: 'wrap', paddingTop: 10}}>A message is a discrete communication</Text>
                 <Text style={{color: colors.lightGray, fontSize: 14, fontWeight: '400', flexWrap: 'wrap', paddingTop: 2}}>intended by the source consumption</Text>
-                <TouchableOpacity style={styles.shadow}>
+                <TouchableOpacity 
+                  onPress={()=> navigation.navigate("HomeScreen")}
+                  style={styles.shadow}>
                     <View style={{display: 'flex', flexDirection: 'row', marginTop: 20, alignItems: 'center', backgroundColor: colors.red, paddingHorizontal
                 : 22, paddingVertical: 15, borderRadius:15}}>
                         <Text style={{color: colors.white, fontSize: 16, fontWeight:'800', paddingRight: 10}}>Let's Start</Text>
