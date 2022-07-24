@@ -1,8 +1,8 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import colors from '../assets/colors/colors'
-import {PlusIcon} from 'react-native-heroicons/solid'
-const PersonRow = ({image,name,description,time,hasBadge = false,badgeCount = 0,hasPlusIcon= false}) => {
+import {PhoneIncomingIcon, PhoneMissedCallIcon, PhoneOutgoingIcon} from 'react-native-heroicons/outline'
+const PersonRow = ({image,name,description,time,badgeCount,hasPlusIcon= false, callType = ''}) => {
   return (
     <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 1}}>
         <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -14,7 +14,7 @@ const PersonRow = ({image,name,description,time,hasBadge = false,badgeCount = 0,
                 { hasPlusIcon && (
                         <Text style={{position: 'absolute',right:0,bottom: 0,textAlign: 'center' ,backgroundColor: colors.red,color: colors.white ,fontSize: 10, fontWeight: '400',borderRadius: 4, padding: 3,paddingHorizontal: 5}}>+</Text>
                     )}
-                { hasBadge && (
+                { badgeCount != undefined && (
                         <Text style={{position: 'absolute',right:-3,top: -3,textAlign: 'center' ,backgroundColor: colors.red,color: colors.white ,fontSize: 10, fontWeight: '400',borderRadius: 10, padding: 3,paddingHorizontal: 5}}>{badgeCount.toString()}</Text>
                 )}
             </View>
@@ -23,7 +23,10 @@ const PersonRow = ({image,name,description,time,hasBadge = false,badgeCount = 0,
                 <Text style={{color:colors.darkGray, fontSize:10, fontWeight: '400', top: 3}}>{description}</Text>
             </View>
         </View>
-      <Text style={{fontSize: 12, fontWeight:"700"}}>{time}</Text>
+        {time !=undefined && (<Text style={{fontSize: 12, fontWeight:"700"}}>{time}</Text>)}
+        {callType == 'missed' && (<PhoneMissedCallIcon size={20} color={colors.red} />)}
+        {callType == 'income' && (<PhoneIncomingIcon size={20} color={colors.green} />)}
+        {callType == 'outgo' && (<PhoneOutgoingIcon size={20} color={colors.yellow} />)}
     </View>
   )
 }

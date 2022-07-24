@@ -9,6 +9,7 @@ const colors = {
     darkBlue: '#181e39',
     lightGray: '#9094a4',
     darkViolet: '#3d4164',
+    yellow: '#f7d434',
   };
   
   export default colors;

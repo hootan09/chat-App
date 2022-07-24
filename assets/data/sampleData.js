@@ -13,6 +13,7 @@ export default sampleData = {
             description: '25 minutes ago',
             time: '3:15',
             badgeCount: 4,
+            callType: 'outgo',
         },
         {
             id: 2,
@@ -21,6 +22,7 @@ export default sampleData = {
             description: '45 minutes ago',
             time: '2:10',
             badgeCount: 7,
+            callType: 'income',
         },
         {
             id: 3,
@@ -29,6 +31,7 @@ export default sampleData = {
             description: '50 minutes ago',
             time: '1:45',
             badgeCount: 1,
+            callType: 'missed',
         },
         {
             id: 4,
@@ -37,6 +40,7 @@ export default sampleData = {
             description: 'Today 7:30 am',
             time: '1 days',
             badgeCount: 5,
+            callType: 'missed',
         },
         {
             id: 5,
@@ -45,6 +49,7 @@ export default sampleData = {
             description: '3 minutes ago',
             time: '21:20',
             badgeCount: 5,
+            callType: 'missed',
         },
         {
             id: 6,
@@ -53,6 +58,7 @@ export default sampleData = {
             description: '4 minutes ago',
             time: '6:15',
             badgeCount: 5,
+            callType: 'missed',
         },
         // {
         //     id: 7,
@@ -92,6 +98,7 @@ export default sampleData = {
             description: 'see You at 2022/07/13',
             time: '21:20',
             badgeCount: 5,
+            callType: 'income'
         },
         {
             id: 2,
@@ -100,6 +107,7 @@ export default sampleData = {
             description: 'my task is done',
             time: '6:13',
             badgeCount: 7,
+            callType: 'missed'
         },
     ],
      

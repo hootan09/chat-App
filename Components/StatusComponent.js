@@ -16,7 +16,6 @@ const StatusComponent = () => {
                   description={sampleData.myStatus.description}
                   time={sampleData.myStatus.time}
                   hasPlusIcon
-                  // hasBadge
                   // badgeCount={6}
                 />
               </TouchableOpacity>

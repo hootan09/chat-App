@@ -30,7 +30,6 @@ const ChatComponent = () => {
               name={item.name}
               description={item.description}
               time={item.time}
-              hasBadge
               badgeCount={item.badgeCount}
             />
           </TouchableOpacity>
@@ -52,7 +51,6 @@ const ChatComponent = () => {
               name={item.name}
               description={item.description}
               time={item.time}
-              hasBadge
               badgeCount={item.badgeCount}
             />
           </TouchableOpacity>
