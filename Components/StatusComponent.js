@@ -4,6 +4,7 @@ import PersonRow from './PersonRow'
 import colors from '../assets/colors/colors'
 import {CameraIcon, PencilIcon} from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
+import sampleData from '../assets/data/sampleData'
 const StatusComponent = () => {
 
   const navigation = useNavigation()
@@ -14,7 +15,7 @@ const StatusComponent = () => {
             <Text style={{color: colors.black, fontSize: 17, fontWeight: '600'}}>My Status</Text>
             <View style={{top: 8}}>
               {/* Profile button */}
-              <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen')}>
+              <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen', {myStatus: sampleData.myStatus})}>
                 <PersonRow
                   image={sampleData.myStatus.image}
                   name={sampleData.myStatus.name}
