@@ -52,7 +52,9 @@ const ProfileScreen = ({navigation}) => {
                 <Text style={{color: colors.darkGray, fontSize: 12, fontWeight: '600', opacity: 0.8, paddingTop: 5}}>Phone Number</Text>
                 <Text style={{color: colors.darkViolet, fontSize: 15, fontWeight: '900', paddingTop: 5}}>+99 0258 3694 222</Text>
             </View>
+            <TouchableOpacity>
             <Text style={{color: colors.red, fontSize: 12, fontWeight: '600', opacity: 0.85}}>Change Number</Text>
+            </TouchableOpacity>
         </View>
 
         <View style={{flexDirection: 'row',paddingHorizontal: 20, marginTop: 20,alignItems: 'center' ,justifyContent: 'space-between'}}>
@@ -60,7 +62,9 @@ const ProfileScreen = ({navigation}) => {
                 <Text style={{color: colors.darkGray, fontSize: 12, fontWeight: '600', opacity: 0.8, paddingTop: 5}}>Email Address</Text>
                 <Text style={{color: colors.darkViolet, fontSize: 15, fontWeight: '900', paddingTop: 5}}>hootan09@Gmail.com</Text>
             </View>
+            <TouchableOpacity>
             <Text style={{color: colors.red, fontSize: 12, fontWeight: '600', opacity: 0.85}}>Change email</Text>
+            </TouchableOpacity>
         </View>
 
         <View style={{flexDirection: 'row',paddingHorizontal: 20, marginTop: 20,alignItems: 'center' ,justifyContent: 'space-between'}}>
@@ -68,7 +72,9 @@ const ProfileScreen = ({navigation}) => {
                 <Text style={{color: colors.darkGray, fontSize: 12, fontWeight: '600', opacity: 0.8, paddingTop: 5}}>Status</Text>
                 <Text style={{color: colors.darkViolet, fontSize: 15, fontWeight: '900', paddingTop: 5}}>Busy</Text>
             </View>
+            <TouchableOpacity>
             <Text style={{color: colors.red, fontSize: 12, fontWeight: '600', opacity: 0.85}}>Change status</Text>
+            </TouchableOpacity>
         </View>
 
         <View style={{flexDirection: 'row',paddingHorizontal: 20, marginTop: 20,alignItems: 'center' ,justifyContent: 'space-between'}}>
@@ -76,7 +82,9 @@ const ProfileScreen = ({navigation}) => {
                 <Text style={{color: colors.darkGray, fontSize: 12, fontWeight: '600', opacity: 0.8, paddingTop: 5}}>Other Stuff</Text>
                 <Text style={{color: colors.darkViolet, fontSize: 15, fontWeight: '900', paddingTop: 5}}>Unknown</Text>
             </View>
+            <TouchableOpacity>
             <Text style={{color: colors.red, fontSize: 12, fontWeight: '600', opacity: 0.85}}>Change</Text>
+            </TouchableOpacity>
         </View>
 
 
