@@ -3,13 +3,18 @@ import React from 'react'
 import PersonRow from './PersonRow'
 import colors from '../assets/colors/colors'
 import {CameraIcon, PencilIcon} from 'react-native-heroicons/outline'
+import { useNavigation } from '@react-navigation/native'
 const StatusComponent = () => {
+
+  const navigation = useNavigation()
+
   return (
     <View style={{flex: 13/16,backgroundColor: colors.white, borderTopRightRadius: 70}}>
           <View style={{paddingTop: 10, paddingHorizontal:15}}>
             <Text style={{color: colors.black, fontSize: 17, fontWeight: '600'}}>My Status</Text>
             <View style={{top: 8}}>
-              <TouchableOpacity>
+              {/* Profile button */}
+              <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen')}>
                 <PersonRow
                   image={sampleData.myStatus.image}
                   name={sampleData.myStatus.name}

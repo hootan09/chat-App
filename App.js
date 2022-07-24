@@ -7,6 +7,10 @@ import { useFonts } from 'expo-font';
 
 import HomeScreen from './Screens/HomeScreen';
 import StartScreen from './Screens/StartScreen';
+import SettingsScreen from './Screens/SettingsScreen';
+import ProfileScreen from './Screens/ProfileScreen';
+import CallScreen from './Screens/CallScreen';
+import ChatScreen from './Screens/ChatScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +33,22 @@ export default function App() {
         <Stack.Screen name="StartScreen" component={StartScreen}/>
         <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
           //headerShown: false,
+          // presentation: 'modal'
+        }} />
+        <Stack.Screen name="SettingsScreen" component={SettingsScreen} options={{
+          headerShown: false,
+          // presentation: 'modal'
+        }} />
+        <Stack.Screen name="ProfileScreen" component={ProfileScreen} options={{
+          headerShown: false,
+          // presentation: 'modal'
+        }} />
+        <Stack.Screen name="CallScreen" component={CallScreen} options={{
+          headerShown: false,
+          presentation: 'fullScreenModal'
+        }} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} options={{
+          headerShown: false,
           // presentation: 'modal'
         }} />
       </Stack.Navigator>

@@ -5,17 +5,20 @@ import colors from '../assets/colors/colors'
 import {AdjustmentsIcon, ArrowLeftIcon, MailIcon} from 'react-native-heroicons/outline'
 import { ArrowNarrowRightIcon, ArrowSmRightIcon, ChevronRightIcon } from 'react-native-heroicons/solid'
 import sampleData from '../assets/data/sampleData'
+import { useNavigation } from '@react-navigation/native'
 const ChatComponent = () => {
 
   let top3Friends = [...sampleData.friends].slice(0,3)
 
+  const navigation = useNavigation();
 
   return (
     <View style={{flex: 13/16,backgroundColor: colors.white, borderTopRightRadius: 70}}>
     <View style={{paddingTop: 25, paddingHorizontal:15}}>
       <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent:  'space-between',}}>
         <Text style={{color: colors.black, fontSize: 17, fontWeight: '600'}}>All Chats</Text>
-        <TouchableOpacity>
+        {/* Settings Button */}
+        <TouchableOpacity onPress={()=> navigation.navigate('SettingsScreen')}>
           <AdjustmentsIcon size={20} color={colors.black}/>
         </TouchableOpacity>
       </View>
@@ -65,7 +68,9 @@ const ChatComponent = () => {
 
     </View>
 
-    <TouchableOpacity>
+
+    {/* Message Button */}
+    <TouchableOpacity onPress={()=> navigation.navigate('ChatScreen')}>
       <View style={{opacity: 0.85,position:'absolute', bottom: 10, right:3 ,backgroundColor: colors.red, padding: 10, borderRadius: 10, marginRight: 7}}>
         <MailIcon size={22} color={colors.white} />
       </View>
