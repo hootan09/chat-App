@@ -25,7 +25,7 @@ const ProfileScreen = ({navigation}) => {
         </View>
         <Image 
             source={myStatus.image}
-            style={{width:98, height:98, alignSelf: 'center', marginTop: '10%'}}
+            style={{width:98, height:98, alignSelf: 'center', marginTop: '10%', borderRadius: 15}}
         />
         <View style={{flex:1, alignItems: 'center', marginTop: 1}}>
             <Text style={{color: colors.white, fontSize:18, fontWeight: '600'}}>{myStatus.name}</Text>
