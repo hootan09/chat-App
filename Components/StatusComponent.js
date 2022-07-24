@@ -35,7 +35,7 @@ const StatusComponent = () => {
             contentContainerStyle={{paddingBottom: 70}}
             >
               {sampleData.friends.map(item=>(
-                  <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen', {myStatus: item})} key={item.id} style={{marginBottom: 4}}>
+                  <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen', {status: item})} key={item.id} style={{marginBottom: 4}}>
                     <PersonRow
                       image={item.image}
                       name={item.name}

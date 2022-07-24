@@ -4,7 +4,7 @@ import colors from '../assets/colors/colors'
 import {ChevronLeftIcon, PencilAltIcon} from 'react-native-heroicons/outline'
 import { useRoute } from '@react-navigation/native'
 const ProfileScreen = ({navigation}) => {
-    const {params: {myStatus}} = useRoute();
+    const {params: {status}} = useRoute();
 
   return (
 <SafeAreaView style={styles.container}>
@@ -24,11 +24,11 @@ const ProfileScreen = ({navigation}) => {
             </TouchableOpacity>
         </View>
         <Image 
-            source={myStatus.image}
+            source={status.image}
             style={{width:98, height:98, alignSelf: 'center', marginTop: '10%', borderRadius: 15}}
         />
         <View style={{flex:1, alignItems: 'center', marginTop: 1}}>
-            <Text style={{color: colors.white, fontSize:18, fontWeight: '600'}}>{myStatus.name}</Text>
+            <Text style={{color: colors.white, fontSize:18, fontWeight: '600'}}>{status.name}</Text>
             <Text style={{color: colors.white, fontSize:12, fontWeight: '400'}}>Active Now</Text>
         </View>
         <View style={{display: 'flex',flex:1, flexDirection: 'row', justifyContent: 'center'}}>

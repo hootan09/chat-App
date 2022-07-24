@@ -26,7 +26,7 @@ const CallComponent = () => {
     <View style={{flex: 1,paddingTop: 5, paddingHorizontal:15,}}>
       <Text style={{color: colors.lightGray, fontSize: 13, fontWeight: '400'}}>Friends</Text>
       {top3Friends.map(item=>(
-          <TouchableOpacity key={item.id} style={{}}>
+          <TouchableOpacity onPress={()=> navigation.navigate('CallScreen', {call: item})} key={item.id} style={{}}>
             <PersonRow
               image={item.image}
               name={item.name}
@@ -48,7 +48,7 @@ const CallComponent = () => {
     <View style={{flex: 1,paddingTop: 30, paddingHorizontal:15,}}>
       <Text style={{color: colors.lightGray, fontSize: 13, fontWeight: '400',marginBottom: 5}}>Group Message</Text>
       {sampleData.groupMessage.map(item=>(
-          <TouchableOpacity key={item.id} style={{}}>
+          <TouchableOpacity onPress={()=> navigation.navigate('CallScreen', {call: item})} key={item.id} style={{}}>
             <PersonRow
               image={item.image}
               name={item.name}
