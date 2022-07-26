@@ -1,14 +1,15 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import {ChevronLeftIcon, PhoneIcon, VideoCameraIcon} from 'react-native-heroicons/outline'
+import {ChevronLeftIcon, MicrophoneIcon, PhoneIcon, VideoCameraIcon, XIcon} from 'react-native-heroicons/outline'
 import colors from '../assets/colors/colors'
 import { useRoute } from '@react-navigation/native'
 
 const ChatScreen = ({navigation}) => {
   const {params: {chat}} = useRoute();
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={{flexDirection: 'row', justifyContent: 'flex-start', marginTop: 15, paddingHorizontal: 15}}>
+  <SafeAreaView style={styles.container}>
+    <View style={{flex: 14/16, borderBottomRightRadius: 40, backgroundColor: colors.white, overflow:'hidden'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'flex-start', marginTop: 15, paddingHorizontal: 15,}}>
         <TouchableOpacity
           onPress={()=>navigation.goBack()}
         >
@@ -16,7 +17,7 @@ const ChatScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
 
-      <View style={{display:'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+      <View style={{display:'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',borderColor: colors.white, borderBottomColor: colors.gray, borderWidth:1}}>
         <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 10, paddingHorizontal: 10}}>
           <Image
            source={chat.image}
@@ -40,8 +41,8 @@ const ChatScreen = ({navigation}) => {
       </View>
       <ScrollView
        showsVerticalScrollIndicator={false}
-       contentContainerStyle={{}}
-       style={{marginHorizontal: 10}}
+       contentContainerStyle={{paddingBottom: 20}}
+       style={{marginHorizontal: 10, paddingBottom: 30}}
       >
         <View style={{marginTop: 15, flex:1, alignItems: 'center'}}>
           <Text style={{fontSize: 13, fontWeight: '500', color: colors.lightGray}}>8:25 Wednesday</Text>
@@ -160,7 +161,26 @@ const ChatScreen = ({navigation}) => {
         </View>
 
       </ScrollView>
-    </SafeAreaView>
+    </View>
+
+    <View style={{position: 'absolute',width: '30%', height: '30%', backgroundColor: colors.darkBlue, bottom: 0, right: 0, zIndex: -1}}></View>
+
+    <View style={{flex: 2/16, backgroundColor: colors.darkBlue, borderTopLeftRadius: 70}}>
+    
+        <View style={{display:'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 15, marginLeft: 30}}>
+          <TouchableOpacity style={{backgroundColor: colors.gray, padding: 8, borderRadius: 10, marginHorizontal:5}}>
+            <XIcon size={22} color={colors.red}/>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{backgroundColor: colors.gray, padding: 8, borderRadius: 10, marginHorizontal:5}}>
+            <MicrophoneIcon size={22} color={colors.lightGray} />
+          </TouchableOpacity>
+
+          <TextInput placeholder='write a message' placeholderTextColor={colors.darkViolet} keyboardType='default' style={{color: colors.darkViolet, backgroundColor: colors.gray, flex:1, marginHorizontal:20, padding:5, borderRadius:8, paddingHorizontal:10}} />
+       </View>
+    </View>
+      
+  </SafeAreaView>
   )
 }
 
