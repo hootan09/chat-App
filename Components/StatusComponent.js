@@ -15,7 +15,7 @@ const StatusComponent = () => {
             <Text style={{color: colors.black, fontSize: 17, fontWeight: '600'}}>My Status</Text>
             <View style={{top: 8}}>
               {/* Profile button */}
-              <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen', {myStatus: sampleData.myStatus})}>
+              <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen', {status: sampleData.myStatus})}>
                 <PersonRow
                   image={sampleData.myStatus.image}
                   name={sampleData.myStatus.name}

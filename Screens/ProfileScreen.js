@@ -5,7 +5,7 @@ import {ChevronLeftIcon, PencilAltIcon} from 'react-native-heroicons/outline'
 import { useRoute } from '@react-navigation/native'
 const ProfileScreen = ({navigation}) => {
     const {params: {status}} = useRoute();
-
+    console.log(status);
   return (
 <SafeAreaView style={styles.container}>
     {/* Top View */}

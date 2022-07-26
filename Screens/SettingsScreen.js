@@ -4,7 +4,7 @@ import {ChevronLeftIcon, ChevronRightIcon} from 'react-native-heroicons/outline'
 import colors from '../assets/colors/colors'
 const SettingsScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={{marginTop: 10, flex:1}}>
+    <SafeAreaView style={{marginTop: 10, flex:1, backgroundColor: colors.white}}>
         <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', marginTop: 10, paddingHorizontal: 15}}>
             <TouchableOpacity
                onPress={()=>navigation.goBack()}

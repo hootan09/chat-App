@@ -1,9 +1,12 @@
 export default sampleData = {
     myStatus: {
+        id: 0,
         image: require('../images/3.png'),
         name: 'Steven Smith',
         description: 'Tap to add status',
-        time: '2:45'
+        time: '2:45',            
+        badgeCount: 4,
+        callType: 'outgo',
     },
     friends: [
         {
