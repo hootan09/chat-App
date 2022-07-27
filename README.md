@@ -23,5 +23,6 @@ $ expo start --clear
 </br>
 <div>
     <img src="./tmp/app7.png" width="30%" height="30%" alt="Chat Screen">
+    <img src="./tmp/app8.png" width="30%" height="30%" alt="Call Screen">
 </div>
 </br>
